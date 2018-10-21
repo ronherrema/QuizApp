@@ -8,13 +8,28 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
+    
+    var myQuestions = ["The capital of Michigan is Detroit", "Dolphins are fish"]
+    var myAnswers = [0: false, 1: false]
+    
+    lazy var myQuiz = Quiz(questions: myQuestions, answers: myAnswers)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-
+    
+    
+    @IBAction func sayTrue(_ sender: UIButton) {
+        if myQuiz.testCorrectness(answer: myQuiz.currentAnswer) {
+            print("it's true")
+        }
+    }
+    
+    
 }
 
