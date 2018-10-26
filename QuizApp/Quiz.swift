@@ -10,11 +10,11 @@ import Foundation
 
 class Quiz {
     
-    
-    var currentAnswer: Bool = true
-    var answers: [Int: Bool] = [:]
-    var questionNumber: Int = 0
     var questions: [String] = []
+    var answers: [Int: Bool] = [:]
+    var currentAnswer: Bool = true
+    var questionNumber: Int = 0
+    
     
     init(questions: [String], answers: [Int: Bool]) {
         self.answers = answers

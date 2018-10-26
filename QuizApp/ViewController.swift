@@ -11,29 +11,62 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var myQuestions = ["The capital of Michigan is Detroit", "Dolphins are fish"]
-    var myAnswers = [0: false, 1: false]
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            // pre-load the first question
+            nextQuestion()
+        }
+
+
+    var myQuestions = ["The capital of Michigan is Lansing",
+                       "Dolphins are fish",
+                       "Grass is purple"]
+    var myAnswers = [0: true, 1: false, 2: false]
     
     lazy var myQuiz = Quiz(questions: myQuestions, answers: myAnswers)
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-    }
     
     @IBOutlet weak var questionField: UITextView!
     
+    @IBOutlet weak var feedback: UILabel!
+    
     @IBAction func sayTrue(_ sender: UIButton) {
         if myQuiz.testCorrectness(answer: myQuiz.currentAnswer) {
-            print("correct, it's true")
+            feedback.text = "correct, it's true"
+        } else {
+            feedback.text = "incorrect"
         }
+        myQuiz.questionNumber += 1
+        
+        // prevent going out of bounds in the questions array
+        if myQuiz.questionNumber == myQuestions.count {
+            myQuiz.questionNumber = 0
+        }
+        nextQuestion()
+       
     }
     
     @IBAction func sayFalse(_ sender: UIButton) {
         if myQuiz.testCorrectness(answer: myQuiz.currentAnswer) {
-            print("correct, it's false")
+            feedback.text = "correct, it's false"
+        } else {
+            feedback.text = "incorrect"
         }
+        myQuiz.questionNumber += 1
+        
+        // prevent going out of bounds in the questions array
+        if myQuiz.questionNumber == myQuestions.count {
+            myQuiz.questionNumber = 0
+        }
+        nextQuestion()
+        
+    }
+    
+    func nextQuestion() {
+        questionField.text = myQuestions[myQuiz.questionNumber]
+        myQuiz.currentAnswer = myAnswers[myQuiz.questionNumber]!
+        print("the current anwer is \(myQuiz.currentAnswer)")
+        
     }
     
 }
