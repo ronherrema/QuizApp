@@ -30,9 +30,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var feedback: UILabel!
     
-    @IBAction func sayTrue(_ sender: UIButton) {
-        if myQuiz.testCorrectness(answer: myQuiz.currentAnswer) {
-            feedback.text = "correct, it's true"
+    @IBAction func testAnswer(_ sender: UIButton) {
+        if sender.tag == 1 {
+            myQuiz.currentAnswer = true
+        } else {
+            myQuiz.currentAnswer = false
+        }
+        if myQuiz.testCorrectness(answer: myQuiz.currentAnswer!) {
+            feedback.text = "correct, it's \(myQuiz.currentAnswer!)"
         } else {
             feedback.text = "incorrect"
         }
@@ -46,26 +51,11 @@ class ViewController: UIViewController {
        
     }
     
-    @IBAction func sayFalse(_ sender: UIButton) {
-        if myQuiz.testCorrectness(answer: myQuiz.currentAnswer) {
-            feedback.text = "correct, it's false"
-        } else {
-            feedback.text = "incorrect"
-        }
-        myQuiz.questionNumber += 1
-        
-        // prevent going out of bounds in the questions array
-        if myQuiz.questionNumber == myQuestions.count {
-            myQuiz.questionNumber = 0
-        }
-        nextQuestion()
-        
-    }
+    
     
     func nextQuestion() {
         questionField.text = myQuestions[myQuiz.questionNumber]
         myQuiz.currentAnswer = myAnswers[myQuiz.questionNumber]!
-        print("the current anwer is \(myQuiz.currentAnswer)")
         
     }
     

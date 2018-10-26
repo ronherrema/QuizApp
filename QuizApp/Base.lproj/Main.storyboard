@@ -20,12 +20,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="XpR-ab-xnv">
                                 <rect key="frame" x="16" y="43" width="345" height="394"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diT-zC-2vK">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diT-zC-2vK">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="True"/>
                                         <connections>
-                                            <action selector="sayTrue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4j-3S-XL7"/>
+                                            <action selector="testAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QZo-WB-Cb9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cS-Qp-LHP">
@@ -33,7 +33,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="False"/>
                                         <connections>
-                                            <action selector="sayFalse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ir-gt-TJX"/>
+                                            <action selector="testAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gV4-gQ-MiY"/>
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Question will appear here" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlR-I3-xNh">

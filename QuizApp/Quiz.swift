@@ -12,7 +12,7 @@ class Quiz {
     
     var questions: [String] = []
     var answers: [Int: Bool] = [:]
-    var currentAnswer: Bool = true
+    var currentAnswer: Bool?
     var questionNumber: Int = 0
     
     
@@ -22,7 +22,7 @@ class Quiz {
     }
     
     func testCorrectness(answer: Bool) -> Bool {
-        if answers[questionNumber] == currentAnswer {
+        if answers[questionNumber] == answer {
             return true
         } else {
             return false
