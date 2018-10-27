@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,49 +18,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="XpR-ab-xnv">
-                                <rect key="frame" x="16" y="43" width="345" height="394"/>
-                                <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diT-zC-2vK">
-                                        <rect key="frame" x="0.0" y="0.0" width="45" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="True"/>
-                                        <connections>
-                                            <action selector="testAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QZo-WB-Cb9"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cS-Qp-LHP">
-                                        <rect key="frame" x="0.0" y="86" width="55" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="False"/>
-                                        <connections>
-                                            <action selector="testAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gV4-gQ-MiY"/>
-                                        </connections>
-                                    </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Question will appear here" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlR-I3-xNh">
-                                        <rect key="frame" x="0.0" y="172" width="271.5" height="148"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="148" id="Yd7-Va-WbN"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgw-MP-OIC">
-                                        <rect key="frame" x="0.0" y="365" width="57" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diT-zC-2vK">
+                                <rect key="frame" x="16" y="210" width="45" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="True"/>
+                                <connections>
+                                    <action selector="testAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QZo-WB-Cb9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cS-Qp-LHP">
+                                <rect key="frame" x="134" y="210" width="55" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="False"/>
+                                <connections>
+                                    <action selector="testAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gV4-gQ-MiY"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Question will appear here" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlR-I3-xNh">
+                                <rect key="frame" x="16" y="37" width="272" height="148"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="Yd7-Va-WbN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose True or False" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgw-MP-OIC">
+                                <rect key="frame" x="16" y="333" width="216.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XpR-ab-xnv" secondAttribute="bottom" constant="230" id="ICZ-M9-u6k"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XpR-ab-xnv" secondAttribute="trailing" constant="14" id="kV8-5A-RJD"/>
-                            <constraint firstItem="XpR-ab-xnv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pzv-3a-Gw8"/>
-                            <constraint firstItem="XpR-ab-xnv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="yhx-WG-fZZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9cS-Qp-LHP" secondAttribute="trailing" symbolic="YES" id="02B-ia-Ntk"/>
+                            <constraint firstItem="BlR-I3-xNh" firstAttribute="leading" secondItem="dgw-MP-OIC" secondAttribute="leading" id="42k-1M-Mru"/>
+                            <constraint firstItem="9cS-Qp-LHP" firstAttribute="leading" secondItem="diT-zC-2vK" secondAttribute="trailing" constant="73" id="4vH-dC-HB1"/>
+                            <constraint firstItem="9cS-Qp-LHP" firstAttribute="baseline" secondItem="diT-zC-2vK" secondAttribute="baseline" id="BGW-Nl-aRW"/>
+                            <constraint firstItem="diT-zC-2vK" firstAttribute="top" secondItem="BlR-I3-xNh" secondAttribute="bottom" constant="25" id="Vnj-c1-V6Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dgw-MP-OIC" secondAttribute="trailing" symbolic="YES" id="ZB5-SW-enh"/>
+                            <constraint firstItem="dgw-MP-OIC" firstAttribute="top" secondItem="diT-zC-2vK" secondAttribute="bottom" constant="82" id="cGf-B3-q7W"/>
+                            <constraint firstItem="BlR-I3-xNh" firstAttribute="leading" secondItem="diT-zC-2vK" secondAttribute="leading" id="jeJ-gY-Obp"/>
+                            <constraint firstItem="BlR-I3-xNh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="niu-6L-WqS"/>
+                            <constraint firstItem="BlR-I3-xNh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="yJn-bz-Zta"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
