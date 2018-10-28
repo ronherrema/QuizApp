@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         }
 
     // note that the members of the array can be put on different lines
-    var myQuestions = ["The capital of Michigan is Lansing",
+    var myQuestions = ["The capital of Michigan is Lansing.",
                        "Dolphins are fish",
                        "Grass is purple"]
     var myAnswers = [0: true, 1: false, 2: false]
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     lazy var myQuiz = Quiz(questions: myQuestions, answers: myAnswers)
     
     
-    @IBOutlet weak var questionField: UITextView!
+    @IBOutlet weak var questionField: UILabel!
     
     @IBOutlet weak var feedback: UILabel!
     
