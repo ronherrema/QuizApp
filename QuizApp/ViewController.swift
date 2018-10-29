@@ -40,7 +40,7 @@ class ViewController: UIViewController {
             myQuiz.currentAnswer = false
         }
         
-        // accessing a value in the dictionary gives back an optional - hence the forced unwrapping
+        // I defined currentAnswer as an optional - hence the forced unwrapping
         if myQuiz.testCorrectness(answer: myQuiz.currentAnswer!) {
             feedback.text = "correct, it's \(myQuiz.currentAnswer!)"
         } else {
