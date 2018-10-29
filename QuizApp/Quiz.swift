@@ -13,7 +13,7 @@ class Quiz {
     var questions: [String] = []
     var answers: [Int: Bool] = [:]
     
-    // the initial current answer cannot be known and is thus an optional
+    // the initial current answer might possibly be unknown and is thus an optional
     var currentAnswer: Bool?
     var questionNumber: Int = 0
     
