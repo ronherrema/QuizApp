@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "False"; ObjectID = "9cS-Qp-LHP"; */
+"9cS-Qp-LHP.normalTitle" = "False";
+
+/* Class = "UILabel"; text = "Question"; ObjectID = "ReG-wu-xHI"; */
+"ReG-wu-xHI.text" = "Question";
+
+/* Class = "UILabel"; text = "Choose True or False"; ObjectID = "dgw-MP-OIC"; */
+"dgw-MP-OIC.text" = "Choose True or False";
+
+/* Class = "UIButton"; normalTitle = "True"; ObjectID = "diT-zC-2vK"; */
+"diT-zC-2vK.normalTitle" = "True";
+
+/* Class = "UIButton"; normalTitle = "Go"; ObjectID = "fqP-kq-kWv"; */
+"fqP-kq-kWv.normalTitle" = "Go";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "vak-lE-4X4"; */
+"vak-lE-4X4.normalTitle" = "Back";

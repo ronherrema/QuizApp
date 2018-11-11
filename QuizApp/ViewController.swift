@@ -16,6 +16,8 @@ class ViewController: UIViewController {
             
             // pre-load the first question
             nextQuestion()
+            
+            // comment added for GitHub illustration
         }
 
     // note that the members of the array can be put on different lines

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="BVf-6C-xHn">
-                                <rect key="frame" x="16" y="36" width="288" height="255"/>
+                                <rect key="frame" x="39" y="60" width="378" height="255"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Question" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReG-wu-xHI">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="29"/>
@@ -56,12 +56,24 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqP-kq-kWv">
+                                <rect key="frame" x="31" y="504" width="30" height="30"/>
+                                <state key="normal" title="Go"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vak-lE-4X4">
+                                <rect key="frame" x="89" y="504" width="123" height="30"/>
+                                <state key="normal" title="Back to the future"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BVf-6C-xHn" secondAttribute="trailing" constant="16" id="5Ix-32-kno"/>
-                            <constraint firstItem="BVf-6C-xHn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="E22-6b-Fx7"/>
-                            <constraint firstItem="BVf-6C-xHn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Zn1-XG-Uua"/>
+                            <constraint firstItem="BVf-6C-xHn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="0T5-X5-wgX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fqP-kq-kWv" secondAttribute="bottom" constant="328" id="4o1-FQ-G6f"/>
+                            <constraint firstItem="fqP-kq-kWv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="AB1-NY-Dmd"/>
+                            <constraint firstItem="vak-lE-4X4" firstAttribute="leading" secondItem="fqP-kq-kWv" secondAttribute="trailing" constant="28" id="CDJ-3o-AzM"/>
+                            <constraint firstItem="BVf-6C-xHn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="Ypd-kW-xDl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BVf-6C-xHn" secondAttribute="trailing" constant="-23" id="ryW-4l-x3R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vak-lE-4X4" secondAttribute="bottom" constant="328" id="yAv-VE-bk9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
