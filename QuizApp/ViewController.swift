@@ -10,15 +10,26 @@ import UIKit
 
 
 class ViewController: UIViewController {
-
+ 
         override func viewDidLoad() {
             super.viewDidLoad()
             
             // pre-load the first question
             nextQuestion()
             
-            // comment added for GitHub illustration
         }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if (UserDefaults.standard.string(forKey: "red") != nil) {
+            print("will appear")
+            let redValue = CGFloat(UserDefaults.standard.float(forKey: "red"))
+            let blueValue = CGFloat(UserDefaults.standard.float(forKey: "blue"))
+            view.backgroundColor = UIColor(red: redValue, green: 0, blue: blueValue, alpha: 1.0)
+        }
+    }
+    
+    
 
     // note that the members of the array can be put on different lines
     var myQuestions = ["The capital of Michigan is Lansing.",
@@ -29,7 +40,7 @@ class ViewController: UIViewController {
     // lazy instantiation solves the problem of 'self' not yet existing
     lazy var myQuiz = Quiz(questions: myQuestions, answers: myAnswers)
     
-    
+   
     @IBOutlet weak var questionField: UILabel!
     
     @IBOutlet weak var feedback: UILabel!

@@ -10,6 +10,57 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--PopupVC-->
+        <scene sceneID="1Tz-C5-hf0">
+            <objects>
+                <viewController id="xxQ-1S-DjU" customClass="PopupVC" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tGc-fm-vnb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nv0-gO-JtZ" userLabel="imageView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSS-4i-f2z">
+                                <rect key="frame" x="329" y="795" width="56" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissVC:" destination="xxQ-1S-DjU" eventType="touchUpInside" id="Uxs-ek-TCn"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DvK-ru-lO4">
+                                <rect key="frame" x="32" y="91" width="51" height="31"/>
+                                <connections>
+                                    <action selector="setting:" destination="xxQ-1S-DjU" eventType="valueChanged" id="R9d-1p-W9E"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DvK-ru-lO4" firstAttribute="top" secondItem="V6L-be-AfY" secondAttribute="top" constant="47" id="22K-8n-1ws"/>
+                            <constraint firstItem="V6L-be-AfY" firstAttribute="bottom" secondItem="ZSS-4i-f2z" secondAttribute="bottom" constant="26" id="3KM-Em-3rY"/>
+                            <constraint firstAttribute="trailing" secondItem="Nv0-gO-JtZ" secondAttribute="trailing" id="Dlq-TA-qe1"/>
+                            <constraint firstItem="V6L-be-AfY" firstAttribute="trailing" secondItem="ZSS-4i-f2z" secondAttribute="trailing" constant="29" id="MAz-m7-P0o"/>
+                            <constraint firstItem="Nv0-gO-JtZ" firstAttribute="top" secondItem="V6L-be-AfY" secondAttribute="top" id="Mj6-nF-ouZ"/>
+                            <constraint firstItem="Nv0-gO-JtZ" firstAttribute="bottom" secondItem="V6L-be-AfY" secondAttribute="bottom" id="dXo-u5-Bj4"/>
+                            <constraint firstItem="DvK-ru-lO4" firstAttribute="leading" secondItem="V6L-be-AfY" secondAttribute="leading" constant="32" id="i8a-gS-Uax"/>
+                            <constraint firstItem="Nv0-gO-JtZ" firstAttribute="leading" secondItem="tGc-fm-vnb" secondAttribute="leading" id="zVg-vE-yvu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V6L-be-AfY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageSwitch" destination="DvK-ru-lO4" id="V9r-gO-U0r"/>
+                        <outlet property="imageView" destination="Nv0-gO-JtZ" id="utW-uz-NPL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qoa-Yf-Lb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879.71014492753625" y="63.616071428571423"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -64,13 +115,22 @@
                                 <rect key="frame" x="89" y="504" width="123" height="30"/>
                                 <state key="normal" title="Back to the future"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbk-8K-mcg">
+                                <rect key="frame" x="343" y="364" width="30" height="30"/>
+                                <state key="normal" title="Info"/>
+                                <connections>
+                                    <segue destination="xxQ-1S-DjU" kind="presentation" modalTransitionStyle="crossDissolve" id="8YE-iG-1hH"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BVf-6C-xHn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="0T5-X5-wgX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fqP-kq-kWv" secondAttribute="bottom" constant="328" id="4o1-FQ-G6f"/>
                             <constraint firstItem="fqP-kq-kWv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="AB1-NY-Dmd"/>
                             <constraint firstItem="vak-lE-4X4" firstAttribute="leading" secondItem="fqP-kq-kWv" secondAttribute="trailing" constant="28" id="CDJ-3o-AzM"/>
+                            <constraint firstItem="Xbk-8K-mcg" firstAttribute="top" secondItem="BVf-6C-xHn" secondAttribute="bottom" constant="49" id="PhW-H6-XMI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xbk-8K-mcg" secondAttribute="trailing" constant="41" id="Q7E-fc-CcY"/>
                             <constraint firstItem="BVf-6C-xHn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="Ypd-kW-xDl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BVf-6C-xHn" secondAttribute="trailing" constant="-23" id="ryW-4l-x3R"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vak-lE-4X4" secondAttribute="bottom" constant="328" id="yAv-VE-bk9"/>
@@ -84,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281.25" y="134.1549295774648"/>
+            <point key="canvasLocation" x="49" y="35"/>
         </scene>
     </scenes>
 </document>
