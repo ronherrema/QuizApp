@@ -19,9 +19,6 @@ class ViewController: UIViewController {
             
         }
     
-    
-    
-    
 
     // note that the members of the array can be put on different lines
     var myQuestions = ["The capital of Michigan is Lansing.",
