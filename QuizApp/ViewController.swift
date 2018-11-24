@@ -19,15 +19,7 @@ class ViewController: UIViewController {
             
         }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if (UserDefaults.standard.string(forKey: "red") != nil) {
-            print("will appear")
-            let redValue = CGFloat(UserDefaults.standard.float(forKey: "red"))
-            let blueValue = CGFloat(UserDefaults.standard.float(forKey: "blue"))
-            view.backgroundColor = UIColor(red: redValue, green: 0, blue: blueValue, alpha: 1.0)
-        }
-    }
+    
     
     
 
